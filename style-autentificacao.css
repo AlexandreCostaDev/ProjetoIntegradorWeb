@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+:root{
+    --preto: #1b2223;
+    --pretoSombra: #1b222350;
+    --pretoSombra2: #1b2223d8;
+    --cinzaEsverdeado: #3a4f50;
+    --cinzaEsverdeadoSombra: #3a4f5050;
+    --cinza: #d1d1d1;
+    --cinzaSombra: #b1b1b1;
+    --branco: #f4fefd;
+    --vermelho: #f65151;
+}
+*::selection{
+    background-color: var(--vermelho);
+    color: var(--branco);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+main{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--branco);
+}
+main h1{
+    font-size: 35px;
+    color: var(--preto);
+    margin: 15px 0;
+}
+.fundo-autent{
+    position: relative;
+    display: inline-block;
+    width: 50vw;
+    height: 70vh;
+    background-color: var(--preto);
+    box-shadow: 5px 5px 7px var(--pretoSombra);
+    border-radius: 4px;
+}
+.fundo-login{
+    position: absolute;
+    width: 65%;
+    height: 55vh;
+    padding: 25px 50px;
+    background-color: var(--cinza);
+    border-radius: 30px;
+    top: 4vh;
+    left: -50px;
+    box-shadow: 5px 0 5px var(--pretoSombra);
+    z-index: 1;
+    transition: all linear .7s;
+}
+.fundo-login h3{
+    font-size: 20px;
+    color: var(--preto);
+}
+.fundo-login h3::after{
+    content: '';
+    display: block;
+    width: 55px;
+    height: 3px;
+    background-color: var(--preto);
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+.esconde-login{
+    width: 100%;
+    height: 100%;
+    padding: 20px 0;
+    opacity: 1;
+    transition: all linear .8s;
+}
+#formLogin{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+}
+#formLogin #email{
+    width: 100%;
+    padding: 8px;
+    border: none;
+    box-shadow: 2px 2px 4px var(--cinzaEsverdeadoSombra);
+}
+.hzt-senha{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.hzt-senha #senha{
+    width: 90%;
+    padding: 8px;
+    border: none;    box-shadow: 2px 2px 4px var(--cinzaEsverdeadoSombra);
+}
+#verSenha, #verSenhaCad{
+    color: var(--preto);
+    font-size: 25px;
+    cursor: pointer;
+}
+.hzt-lembre-se{
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    align-items: center;
+}
+.hzt-lembre-se #guardar{
+    accent-color: var(--vermelho);
+}
+.hzt-lembre-se label{
+    color: var(--preto);
+    font-size: 15px;
+}
+#btn-entrar, #btn-cadastrar{
+    width: 200px;
+    align-self: center;
+    border: none;
+    padding: 8px 10px;
+    background-color: var(--preto);
+    color: var(--branco);
+    box-shadow: 3px 3px 5px var(--pretoSombra);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all ease-in-out .5s;
+}
+#btn-entrar:hover, #btn-cadastrar:hover{
+    background-color: var(--pretoSombra);
+}
+.fundo-cadastro{
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 55vh;
+    padding: 25px 50px;
+    background-color: var(--cinzaSombra);
+    box-shadow: -5px 0 5px var(--pretoSombra);
+    border-radius: 30px;
+    top: 4vh;
+    right: -50px;
+    z-index: 0;
+    transition: all linear .7s;
+}
+.fundo-cadastro h3{
+    text-align: right;
+    font-size: 20px;
+    color: var(--preto);
+    position: relative;
+}
+.fundo-cadastro h3::after{
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 85px;
+    height: 3px;
+    background-color: var(--preto);
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+.esconde-cadastro{
+    width: 100%;
+    height: 100%;
+    padding: 20px 0;
+    opacity: 0;
+    transition: all linear .8s;
+}
+.esconde-cadastro #formCad{
+    display: flex;
+    flex-direction: column;
+}
+.esconde-cadastro #formCad label{
+    font-size: 18px;
+    color: var(--preto);
+    margin: 20px 0 5px 0;
+}
+#formCad label:first-child{
+    margin-top: 0;
+}
+#formCad #nome, #formCad #emailCad{
+    width: 90%;
+    padding: 8px;
+    border: none;
+    box-shadow: 2px 2px 4px var(--cinzaEsverdeadoSombra);
+}
+#formCad .hzt-senha-cad{
+    width: 100%;
+    padding: 10px 0;
+}
+#formCad .hzt-senha-cad #senhaCad, #formCad .hzt-senha-cad #Confsenha{
+    width: 38%;
+    padding: 8px;
+    border: none;
+    box-shadow: 2px 2px 4px var(--cinzaEsverdeadoSombra);
+}
+#formCad .hzt-senha-cad #Confsenha{
+    margin-right: 0;
+}
+#formCad #btn-cadastrar{
+    margin-left: -120px;
+}
+#check-login, #check-cad{
+    display: none;
+}

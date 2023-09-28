@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+:root {
+    --preto: #1b2223;
+    --pretoSombra: #1b222350;
+    --cinzaEsverdeado: #3a4f50;
+    --cinzaEsverdeadoSombra: #3a4f5050;
+    --cinza: #d1d1d1;
+    --branco: #f4fefd;
+    --brancoHover: #f4fefd50;
+    --vermelho: #f65151;
+}
+
+*::selection {
+    background-color: var(--vermelho);
+    color: var(--branco);
+}
+
+::-webkit-scrollbar {
+    width: 18px;
+    background-color: var(--cinza);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--cinzaEsverdeado);
+    border-radius: 5px;
+    border: 1px solid var(--cinza);
+}
+
+::-webkit-scrollbar-button {
+    background-color: var(--cinzaEsverdeado);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+body {
+    overflow: hidden;
+}
+
+.grid-wrapper *>img {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    box-shadow: 3px 3px 5px var(--pretoSombra);
+    transition: all ease-in-out .3s;
+}
+
+.grid-wrapper *>img:hover {
+    transform: scale(110%);
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 550px 100px;
+    gap: 10px;
+    padding: 30px;
+}
+
+.data .escolher-data {    
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+}
+
+.horario {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+}
+
+.servico {
+    grid-row: 1 / 2;
+    grid-column: 3 / 4;
+}
+
+.servico .lista-serv {
+    width: 300px;
+    padding: 15px;
+    white-space: nowrap;
+    overflow-y: scroll;
+}
+
+.servico .lista-serv li {
+    list-style: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--branco);
+}
+
+.servico .lista-serv li input {
+    accent-color: var(--vermelho);
+}
+
+.servico .lista-serv li label {
+    font-size: 18px;
+    color: var(--branco);
+    margin-left: 5px;
+}
+
+.bloco {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: var(--preto);
+    box-shadow: 5px 5px 7px var(--pretoSombra);
+}
+
+.lbl-titulo {
+    font-size: 20px;
+    color: var(--branco);
+}
+
+.input {
+    width: 200px;
+    height: 25px;
+    padding: 5px;
+    border-radius: 25px;
+    color: var(--preto);
+    box-shadow: 3px 3px 5px var(--cinzaEsverdeado);
+}
+
+.indisponivel {
+    color: var(--vermelho);
+    text-align: center;
+    display: none;
+}
+
+.profissional {
+    grid-row: 1 / 2;
+    grid-column: 4 / 5;
+    padding: 16px;
+    box-shadow: 5px 5px 7px var(--pretoSombra);
+}
+
+.profissional ul li {
+    list-style: none;
+}
+
+.profissional ul li.pai{
+    color: var(--preto);
+}
+
+.profissional ul li ul.filho{
+    margin-left: 30px;
+}
+
+.profissional ul li input[type="radio"] {
+    display: none;
+}
+
+.profissional ul li input[type="radio"]:checked~label {
+    border: dashed 3px var(--cinzaEsverdeado);
+}
+
+.profissional ul li label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.rodape {
+    grid-row: 2 / 3;
+    grid-column: 1 / 4;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rodape p {
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--preto);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.rodape p .decimal {
+    font-size: 20px;
+    align-self: flex-start;
+}
+
+.rodape p .centavos {
+    font-size: 20px;
+    align-self: flex-start;
+    color: var(--cinzaEsverdeado);
+}
+
+.rodape input[type="button"] {
+    width: 200px;
+    padding: 15px;
+    border: none;
+    background-color: var(--preto);
+    color: var(--branco);
+    border-radius: 7px;
+    box-shadow: 3px 3px 5px var(--pretoSombra);
+    transition: all ease-in-out .5s;
+    cursor: pointer;
+}
+
+.rodape input[type="button"]:hover {
+    background-color: var(--pretoSombra);
+}

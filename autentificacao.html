@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style-autentificacao.css">
+    <link rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/90ecd35a7b.js" crossorigin="anonymous"></script>
+    <title>Login/Cadastro - Cesão Barbearia</title>
+</head>
+
+<body>
+    <main>
+        <h1>Cesão Barbearia</h1>
+        <section class="fundo-autent">
+            <!--Login-->
+            <div class="fundo-login">
+                <h3 id="login">Login</h3>
+                <div class="esconde-login">
+                    <form name="formLogin" id="formLogin" method="post" action="">
+                        <input type="email" name="txtEmail" id="email" placeholder="Email" maxlength="50" required>
+                        <div class="hzt-senha">
+                            <input type="password" name="txtSenha" id="senha" placeholder="Senha" maxlength="20"
+                                required>
+                            <i class="fa-solid fa-eye" id="verSenha" onclick="verSenha()"></i>
+                        </div>
+                        <div class="hzt-lembre-se">
+                            <input type="checkbox" name="checkGuardar" id="guardar">
+                            <label for="guardar">Lembre-se</label>
+                        </div>
+                        <input type="submit" name="btn-entrar" id="btn-entrar" value="Entrar">
+                    </form>
+                </div>
+            </div>
+            <!--Cadastro-->
+            <div class="fundo-cadastro">
+                <h3 id="cadastro">Cadastro</h3>
+                <div class="esconde-cadastro">
+                    <form id="formCad" method="post" action="">
+                        <label for="nome">Nome</label>
+                        <input type="text" name="txtNome" id="nome" placeholder="Digite seu nome completo"
+                            maxlength="50" required>
+                        <label for="emailCad">E-mail</label>
+                        <input type="email" name="txtEmailCadastro" id="emailCad" placeholder="Digite seu e-mail"
+                            maxlength="50" required>
+                        <label for="senhaCad">Senha</label>
+                        <div class="hzt-senha-cad">
+                            <input type="password" name="txtSenhaCad" id="senhaCad" placeholder="Digite sua senha"
+                                maxlength="20" required>
+                            <input type="password" name="txtConfSenha" id="Confsenha" placeholder="Confirme sua senha"
+                                maxlength="20" required>
+                            <i class="fa-solid fa-eye" id="verSenhaCad" onclick="verSenha()"></i>
+                        </div>
+                        <input type="submit" name="btn-cadastrar" value="Cadastrar" id="btn-cadastrar">
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="../js/atent.js"></script>
+</body>
+
+</html>

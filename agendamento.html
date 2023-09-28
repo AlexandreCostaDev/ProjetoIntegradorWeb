@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style-agendamento.css">
+    <link rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/90ecd35a7b.js" crossorigin="anonymous"></script>
+    <title>Agendamento - Cesão Barbearia</title>
+</head>
+
+<body>
+    <form name="form1" method="post" action="" class="grid-wrapper">
+        <!--Input Data-->
+        <section class="escolher-data bloco">
+            <label for="data" class="lbl-titulo">Escolha a Data</label>
+            <input type="date" id="data" name="txt-data" class="input" required>
+            <p class="indisponivel">Data Indisponível!<br>
+                Por favor, verifique outra data.</p>
+        </section>
+        <!--Input Hora-->
+        <section class="horario bloco">
+            <label for="horario" class="lbl-titulo">Escolha o Horário</label>
+            <input type="time" id="horario" name="txt-horario" class="input" required>
+            <p class="indisponivel">Horário Indisponível!<br>
+                Por favor, verifique outra data.</p>
+        </section>
+        <!--Input Serviços-->
+        <section class="servico bloco">
+            <label class="lbl-titulo">Escolha o(s) Serviço(s)</label>
+            <ul class="lista-serv">
+                <li>
+                    <input type="checkbox" name="txt-servico" id="prog" value="Progressiva">
+                    <label for="prog">Progressiva</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="txt-servico" id="relax" value="Relaxamento">
+                    <label for="relax">Alisamento Americano (relaxamento)</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="txt-servico" id="sobran" value="Sobrancelha">
+                    <label for="sobran">Sobrancelha</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="txt-servico" id="luzes" value="Luzes">
+                    <label for="luzes">Luzes</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="txt-servico" id="platin" value="Luzes Platinadas">
+                    <label for="platin">Luzes Platinadas (nevou)</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="txt-servico" id="bigode" value="Bigode">
+                    <label for="bigode">Bigode (buço)</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="txt-servico" id="pigmen" value="Pigmentação">
+                    <label for="pigmen">Pigmentação</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="txt-servico" id="pezinho" value="Pezinho">
+                    <label for="pezinho">Acabamento (pezinho)</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="txt-servico" id="corte" value="Corte">
+                    <label for="corte">Corte de Cabelo</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="txt-servico" id="corte-fem" value="Corte Feminino">
+                    <label for="corte-fem">Corte de Cabelo Feminino</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="txt-servico" id="umpente" value="Corte com um Pente">
+                    <label for="umpente">Corte de Cabelo só com um pente (0, 1, 2, 3 etc)</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="txt-servico" id="corte-nudred" value="Corte Afro com Penteado Nudred">
+                    <label for="corte-nudred">Corte de Cabelo Afro + Penteado Nudred</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="txt-servico" id="navalha" value="Raspar Navalha">
+                    <label for="navalha">Raspar Cabelo (navalha)</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="txt-servico" id="afro-cach-masc"
+                        value="Corte Afro ou Cacheado Masculino">
+                    <label for="afro-cach-masc">Corte Afro ou Cacheado (masculino)</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="txt-servico" id="crespo-cach-fem"
+                        value="Corte Crespo ou Cacheado Feminino">
+                    <label for="crespo-cach-fem">Corte Crespo ou Cacheado (feminino)</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="txt-servico" id="corte-infantil" value="Corte Infantil">
+                    <label for="corte-infantil">Corte de Cabelo Infantil (até 10 anos)</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="txt-servico" id="corte-esc-final" value="Corte com Escova">
+                    <label for="corte-esc-final">Corte de Cabelo + Escovação e Finalização</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="txt-servico" id="alinham-barba" value="Alinhamento de Barba">
+                    <label for="alinham-barba">Alinhamento de Barba</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="txt-servico" id="barba" value="Barba">
+                    <label for="barba">Barba</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="txt-servico" id="raspar-barba" value="Raspar Barba">
+                    <label for="raspar-barba">Raspar Barba (somente na máquina)</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="txt-servico" id="barboterapia" value="Barboterapia">
+                    <label for="barboterapia">Barboterapia</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="txt-servico" id="corte-barba" value="Corte + Barba">
+                    <label for="corte-barba">Corte + Barba</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="txt-servico" id="corte-sobran" value="Corte + Sobrancelha">
+                    <label for="corte-sobran">Corte de Cabelo + Sobrancelha</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="txt-servico" id="corte-barba-sobran"
+                        value="Corte + Barba + Sobrancelha">
+                    <label for="corte-barba-sobran">Corte de Cabelo + Barba + Sobrancelha</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="txt-servico" id="corteSimples-barba" value="Corte Simples + Barba">
+                    <label for="corteSimples-barba">Corte Simples (raspar) + Barba</label>
+                </li>
+            </ul>
+        </section>
+        <!--Input Profissional-->
+        <section class="profissional">
+            <ul>
+                <li class="pai">Cabelo Geral
+                    <ul class="filho">
+                        <li>
+                            <input type="radio" name="funcSelect" id="cesar">
+                            <label for="cesar">
+                                <img src="../img/Equipe/cesar.png" alt="Cesar">
+                                <p>Cesar</p>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="funcSelect" id="matheus">
+                            <label for="matheus">
+                                <img src="../img/Equipe/matheus.png" alt="Matheus">
+                                <p>Matheus</p>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="funcSelect" id="brendo">
+                            <label for="brendo">
+                                <img src="../img/Equipe/brendo.png" alt="Brendo">
+                                <p>Brendo</p>
+                            </label>
+                        </li>
+                    </ul>
+                </li>
+                <li class="pai">Trancista
+                    <ul class="filho">
+                        <li>
+                            <input type="radio" name="funcSelect" id="thamara">
+                            <label for="thamara">
+                                <img src="../img/Equipe/thamara.png" alt="Thamara">
+                                <p>Thamara</p>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="funcSelect" id="thayna">
+                            <label for="thayna">
+                                <img src="../img/Equipe/thayna.png" alt="Thayná">
+                                <p>Thayná</p>
+                            </label>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <!--Input Valor-->
+        <footer class="rodape">
+            <p><span class="moeda">R$</span><span class="real">0</span><span class="decimal">,</span><span
+                    class="centavos">00</span></p>
+            <input type="button" value="Agendar" name="btn-agendar">
+        </footer>
+    </form>
+</body>
+
+</html>
